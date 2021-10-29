@@ -5,8 +5,13 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/AndresLopezGarcia/Project-Config-Server
-  application:
-    name: config-service
-  
+          uri: https://github.com/AndresLopezGarcia/Project-ConfigData
+          searchPaths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          default-label: main
+  security:
+    user:
+      name: admin
+      password: s3cr3t
     
